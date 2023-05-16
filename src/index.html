@@ -6,24 +6,25 @@
 		<title>Главная</title>
 	</head>
 	
-	<body>		
+	<body>
+		@@include('components/left_menu.html', {})
 		<header>
 			<nav class="right-menu"> 
-				<ul class="right-menu__navigation navigation">
-					<li><a href="#" class="navigation__link text-font">Меню</a></li> 
-					<li><a href="#" class="navigation__link text-font">Доставка</a></li>    
-					<li><a href="#" class="navigation__link text-font">Оплата</a></li>   
-					<li><a href="#" class="navigation__link navigation__link--selected text-font">Бронь столика</a></li>    
+				<ul class="right-menu__navigation navigation__list">
+					<li class="list__item"><a href="#" class="navigation__link">Меню</a></li> 
+					<li class="list__item"><a href="#" class="navigation__link">Доставка</a></li>    
+					<li class="list__item"><a href="#" class="navigation__link">Оплата</a></li>   
+					<li class="list__item"><a href="#" class="navigation__link navigation__link--selected">Бронь столика</a></li>    
 				</ul>
 			</nav>
-			@@include('html/left_menu.html', {})
+			<h1 class="title">Видовой ресторан Food Exxe Relo<br>На Крестовском острове</h1>
 		</header>		
 		<main>
 			<section class="about-restaurant">
-				<h2 class="about-restaurant__title main-title main-title__position text-font">о ресторане -</h2>	
+				<h2 class="about-restaurant__title main-title">о ресторане</h2>	
 				<div class="about-restaurant__text text-restaurant">
-					<h3 class="text-restaurant__title main-subtitle text-font">Food<br>Exxe<br>Relo</h3>
-					<div class="text-restaurant__description main-text text-font">
+					<h3 class="text-restaurant__title main-subtitle">Food<br>Exxe<br>Relo</h3>
+					<div class="text-restaurant__description main-text">
 						<p>Sed vel ornare ut rhoncus, ac ut nibh. Amet at sit et nibh. In lectus 
 						<br>phasellus non ornare eget velit. Facilisi urna, tristique dui, rhoncus, 
 						<br>dolor. Tincidunt enim gravida dignissim leo pulvinar sit volutpat 
@@ -38,7 +39,7 @@
 				</div>
 			</section>
 			<section class="about-menu">
-				<h2 class="about-menu__title main-title main-title__position">меню -</h2>
+				<h2 class="about-menu__title main-title">меню</h2>
 				<div class="about-menu__text text-menu">
 					<h3 class="text-menu__title main-subtitle">Меню</h3>
 					<div class="text-menu__description main-text">
@@ -63,7 +64,7 @@
 				</div>
 			</section>
 			<section class="about-delivery">
-				<h2 class="about-delivery__title main-title main-title__position">доставка -</h2>
+				<h2 class="about-delivery__title main-title">доставка</h2>
 				<div class="about-delivery__text text-delivery">
 					<h3 class="text-delivery__title main-subtitle">Служба<br>доставки</h3>
 					<div class="text-delivery__description main-text">
@@ -79,39 +80,39 @@
 					</div>
 				</div>
 				<div class="about-delivery__button-delivery button-delivery">
-					<button class="button-delivery button-delivery__more button-delivery__more--selected">Подробнее</button>
-					<button class="button-delivery button-delivery__conditions button-delivery__conditions--selected">Условия доставки</button>
+					<button class="button-delivery__more button"><span class="button-delivery__text">Подробнее</span></button>
+					<button class="button-delivery__conditions button"><span class="button-delivery__text button-delivery__text--color">Условия доставки</span></button>
 				</div>
 			</section>
-			@@include('html/contacts.html', {})
+			@@include('components/contacts.html', {})
 		</main>
-		@@include('html/footer_main.html', {})
+		@@include('components/footer_main.html', {})
 		<div class="ttr">
 			<form action="https://www.google.com/search?q=htmlacademy" method="post" class="form-table-reservation">	
 				<img src="../img/main/food_logo.svg" class="food-logo" alt="Логотип ресторана">
-				<p class="form-table-reservation__text">Забронировать столик</p>
-				<input type="text" name="name" value="Имя" class="input">
-				<input type="text" name="phone-number"" value="Телефон" class="input">
+				<p class="form-table-reservation__text">Забронировать столик</p>			 
+				<input type="text" name="name" class="input" placeholder="Имя">
+				<input type="tel" name="phone-number" placeholder="Телефон" class="input" pattern="[0-9]{11}">
 				<div class="input-guest-time">
-					<input type="text" name="guests" value="Гостей" class="input input-select">			
-					<input type="text" name="time" value="Время" class="input input-select">
+					<input type="number" name="guests" placeholder="Гостей" class="input input-select">			
+					<input type="number" name="time" placeholder="Время" class="input input-select">
 				</div>
-				<button class="input__button-tb-rs"><span class="input__button-tb-rs-text">Забронировать</span></button>			
+				<button class="button"><span class="button-text-style">Забронировать</span></button>			
 			</form>
 		</div>
 		<nav class="right-menu-full">
 			<img src="../img/main/food_logo.svg" alt="Логотип ресторана">
 			<img src="../img/main/close_logo.svg" alt="Закрыть">
 			<ul class="right-menu-full__navigation full-navigation">
-				<li class="full-navigation__link"><a class="full-navigation__color" href="#">Меню</a></li> 
-				<li class="full-navigation__link"><a class="full-navigation__color" href="#">Доставка</a></li>    
-				<li class="full-navigation__link"><a class="full-navigation__color" href="#">Оплата</a></li>
-				<button class="right-menu-full__button"><span class="right-menu-full__text-button">Бронь столика</span></button>
-			</ul>			
+				<li class="full-navigation__link"><a class="full-navigation__link--color" href="#">Меню</a></li> 
+				<li class="full-navigation__link"><a class="full-navigation__link--color" href="#">Доставка</a></li>    
+				<li class="full-navigation__link"><a class="full-navigation__link--color" href="#">Оплата</a></li>				
+			</ul>
+			<button class="right-menu-full__button button"><span class="right-menu-full__button--text">Бронь столика</span></button>
 			<div class="right-menu-full__nav-logo nav-logo">
-				<a href="#"><img class="nav-logo__logo" src="../img/main/youtube_logo.svg" alt="Логотип ютуба"></a>
-				<a href="#"><img class="nav-logo__logo" src="../img/main/vk_logo.svg" alt="Логотип вконтакте"></a>
-				<a href="#"><img class="nav-logo__logo" src="../img/main/tg_logo.svg" alt="Логотип телеграмма"></a>
+				<a href="https://www.youtube.com/" target="_blank"><img class="nav-logo__menu-full" src="../img/main/youtube_logo.svg" alt="Логотип ютуба"></a>
+				<a href="https://vk.com/" target="_blank"><img class="nav-logo__menu-full" src="../img/main/vk_logo.svg" alt="Логотип вконтакте"></a>
+				<a href="https://web.telegram.org/z/" target="_blank"><img class="nav-logo__menu-full" src="../img/main/tg_logo.svg" alt="Логотип телеграмма"></a>
 			</div>
 		</nav>
 		
@@ -147,7 +148,7 @@
 				<p class="el__name">Яичница-глазунья из трех <br>яиц</p>
 				<div class="price-and-basket">
 					<p class="el__price">250 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -155,7 +156,7 @@
 				<p class="el__name">Омлет из трёх яиц</p>
 				<div class="price-and-basket">
 					<p class="el__price">250 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -163,7 +164,7 @@
 				<p class="el__name">Домашние сырники</p>
 				<div class="price-and-basket">
 					<p class="el__price">490 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -171,7 +172,7 @@
 				<p class="el__name">Блины</p>
 				<div class="price-and-basket">
 					<p class="el__price">от 190 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -179,7 +180,7 @@
 				<p class="el__name">Каша c ягодами и <br>кедровыми орехами</p>
 				<div class="price-and-basket">
 					<p class="el__price">450 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -187,7 +188,7 @@
 				<p class="el__name">Скрэмбл</p>
 				<div class="price-and-basket">
 					<p class="el__price">290 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -195,7 +196,7 @@
 				<p class="el__name">Яйцо Бенедикт с лососем</p>
 				<div class="price-and-basket">
 					<p class="el__price">850 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -203,7 +204,7 @@
 				<p class="el__name">Яйцо Бенедикт с беконом</p>
 				<div class="price-and-basket">
 					<p class="el__price">650 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -211,7 +212,7 @@
 				<p class="el__name">Гречневая каша с авокадо, <br>яйцом пашот и пармезаном</p>
 				<div class="price-and-basket">
 					<p class="el__price">490 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -219,7 +220,7 @@
 				<p class="el__name">Кобб – салат с лососем</p>
 				<div class="price-and-basket">
 					<p class="el__price">890 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -227,12 +228,12 @@
 				<p class="el__name">Кобб – салат с креветками</p>
 				<div class="price-and-basket">
 					<p class="el__price">960 ₽</p>
-					<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+					<button class="button"><span class="button-text-style">В корзину</span></button>
 				</div>
 			</div>
 		</div>
-		@@include('html/contacts.html', {})
-		@@include('html/footer.html', {})
+		@@include('components/contacts.html', {})
+		@@include('components/footer.html', {})
 			
 			<!-- third page -->
 			<nav class="menu-second-page">	
@@ -269,16 +270,16 @@
 					</div>
 				</div>
 				<form action="https://www.google.com/search?q=htmlacademy" method="post" class="dish-card__form-dish">
-					<h2 class="form-dish__title first-title">Яичница-глазунья из<br>трех яиц</h2>
+					<h2 class="form-dish__title form-dish__title--first-title">Яичница-глазунья из<br>трех яиц</h2>
 					<div class="form-dish__form">
-						<pre><p class="form__price">250 ₽<span class="form__grammar"> / 400 грамм</span></p></pre>
+						<pre><span class="form__price"> 250 ₽</span><span class="form__grammar"> / 400 грамм</span></pre>
 						<p class="form__number-porcion">Количество порций:</p>
 						<div class="input-basket">
 							<input type="number" value="1" class="form__input">
-							<button class="form__basket"><span class="form__basket-text">В корзину</span></button>
+							<button class="form__basket button">В корзину</button>
 						</div>
 					</div>
-					<h2 class="form-dish__title second-title">Сделать еще вкуснее</h2>
+					<h2 class="form-dish__title form-dish__title--second-title">Сделать еще вкуснее</h2>
 					<div class="form-dish__checkbox form-checkbox">
 						<div class="form-checkbox__text">
 							<br><label for="1">
@@ -307,20 +308,11 @@
 					</div>
 				</form>
 			</div>
-			@@include('html/contacts.html', {})
-			@@include('html/footer.html', {})
+			@@include('components/contacts.html', {})
+			@@include('components/footer.html', {})
 			
 			<!-- fourth page -->
-			<div class="buttons-on-fourth-page">
-				<button class="buttons-on-fourth-page__table-reservation"><span class="buttons-on-fourth-page__table-reservation-text">Бронь столика</span></button>
-				<div class="buttons-on-fourth-page__buttons">
-					<button class="buttons buttons--selected"><span class="buttons-text text-color">Подробнее</span></button>	
-					<button class="buttons"><span class="buttons-text">Условия доставки</span></button>
-				</div>
-			</div>
-			@@include('html/footer_main.html', {})
-			@@include('html/contacts.html', {})
-			@@include('html/left_menu.html', {})
+			@@include('components/contacts.html', {})
 			<div class="form-and-dish">
 				<form action="https://www.google.com/search?q=htmlacademy" method="post" class="form-fourth-page">
 					<input type="text" name="name" value="Имя" class="form-fourth-page__name">
@@ -331,11 +323,11 @@
 					<p class="el__name">Яичница-глазунья из трех <br>яиц</p>
 					<div class="price-and-basket">
 						<p class="el__price">250 ₽</p>
-						<button class="el__basket"><span class="el__basket-text">В корзину</span></button>
+						<button class="button"><span class="button-text-style button-text-style">В корзину</span></button>
 					</div>
 				</div>
 			</div>
-			@@include('html/footer.html', {})
+			@@include('components/footer.html', {})
 	</body>
 
 </html>

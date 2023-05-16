@@ -16,14 +16,14 @@
 		src: {
 			scss: `${srcFolder}/scss/style.scss`,
 			html: `${srcFolder}/*.html`,
-			images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif}`,
-			svg: `${srcFolder}/img/**/*.svg`,
+			images: `${srcFolder}/asserts/img/**/*.{jpg,jpeg,png,gif}`,
+			svg: `${srcFolder}/asserts/img/**/*.svg`,
 			files: `${srcFolder}/files/**/*.*`
 		},
 		watch: {
 			scss: `${srcFolder}/scss/**/*.scss`,
 			html: `${srcFolder}/**/*.html`,
-			images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,svg}`,
+			images: `${srcFolder}/asserts/img/**/*.{jpg,jpeg,png,gif,svg}`,
 			files: `${srcFolder}/files/**/*.*`
 		},
 		clean: buildFolder,
