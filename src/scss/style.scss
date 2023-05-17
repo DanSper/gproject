@@ -1,6 +1,6 @@
 @import "normalize.scss";
-@import "skyFolder.scss";
-@import "variebles.scss";
+@import "scaffolding.scss";
+@import "variables.scss";
 
 
 @font-face {
@@ -12,7 +12,7 @@
 
 
 header {
-	background: $lightBrown;
+	background: $darkGreen;
 	background-image: url("../img/main/header_in_main_page.jpg");
 	width: 100vw;
 	height: 100vh;
@@ -348,12 +348,15 @@ header {
 
 
 .ttr {
-	background-image: url("../img/main/header_in_main_page.jpg");
-	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(0 0 0 / 61%);
+	position: fixed;
+	top: 0px;	
 	width: 100vw;
 	height: 100vh;
-	margin: auto;
-	margin-top: 100px;
+	z-index: 1;
 }
 
 .form-table-reservation {
@@ -361,13 +364,15 @@ header {
 	width: 416px;
 	height: 572px;
 	background: black;
-	margin: auto;
-	position: relative;
-	top: 11%;
 	&__text {
 		@include font(700, 20px);		
 		color: white;
-	}
+	}	
+}
+
+
+.form-table-reservation__button {
+	margin: 0 10px;
 }
 		
 .input-guest-time {
@@ -383,6 +388,7 @@ header {
 	&-select {
 		width: 118px;
 		margin: 0 20px;
+		max-height: 44px;
 	}
 }
 	

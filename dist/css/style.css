@@ -345,7 +345,7 @@ p {
   src: url("../fonts/circe.woff2") format("woff2"), url("../fonts/circe.woff") format("woff");
 }
 header {
-  background: #B59571;
+  background: #006400;
   background-image: url("../img/main/header_in_main_page.jpg");
   width: 100vw;
   height: 100vh;
@@ -719,12 +719,15 @@ header {
 }
 
 .ttr {
-  background-image: url("../img/main/header_in_main_page.jpg");
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.61);
+  position: fixed;
+  top: 0px;
   width: 100vw;
   height: 100vh;
-  margin: auto;
-  margin-top: 100px;
+  z-index: 1;
 }
 
 .form-table-reservation {
@@ -735,14 +738,15 @@ header {
   width: 416px;
   height: 572px;
   background: black;
-  margin: auto;
-  position: relative;
-  top: 11%;
 }
 .form-table-reservation__text {
   font-weight: 700;
   font-size: 20px;
   color: white;
+}
+
+.form-table-reservation__button {
+  margin: 0 10px;
 }
 
 .input-guest-time {
@@ -759,6 +763,7 @@ header {
 .input-select {
   width: 118px;
   margin: 0 20px;
+  max-height: 44px;
 }
 
 .right-menu-full {
