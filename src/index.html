@@ -91,13 +91,16 @@
 			<form action="https://www.google.com/search?q=htmlacademy" method="post" class="form-table-reservation">	
 				<img src="../img/main/food_logo.svg" class="food-logo" alt="Логотип ресторана">
 				<p class="form-table-reservation__text">Забронировать столик</p>			 
-				<input type="text" name="name" class="input" placeholder="Имя">
-				<input type="tel" name="phone-number" placeholder="Телефон" class="input" pattern="[0-9]{11}">
+				<input type="text" name="name" class="input" placeholder="Имя" title="Не менее четырех букв" pattern="[А-Яа-я]{4,}" autofocus required>
+				<input type="tel" name="phone-number" placeholder="Телефон" class="input" value="+7" pattern="\+[0-9]{11}" title="Введите свой номер телефона" required>
 				<div class="input-guest-time">
 					<input type="number" name="guests" placeholder="Гостей" class="input input-select">			
-					<input type="number" name="time" placeholder="Время" class="input input-select">
+					<input type="time" name="time" placeholder="Время" class="input input-select">
 				</div>
-				<button class="button"><span class="button-text-style">Забронировать</span></button>			
+				<div class="form-table-reservation__buttons">
+					<button class="button form-table-reservation__button" type="submit">Забронировать</button>
+					<button class="button form-table-reservation__button" type="reset">Сбросить</button>
+				</div>
 			</form>
 		</div>
 		<nav class="right-menu-full">
@@ -148,7 +151,7 @@
 				<p class="el__name">Яичница-глазунья из трех <br>яиц</p>
 				<div class="price-and-basket">
 					<p class="el__price">250 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -156,7 +159,7 @@
 				<p class="el__name">Омлет из трёх яиц</p>
 				<div class="price-and-basket">
 					<p class="el__price">250 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -164,7 +167,7 @@
 				<p class="el__name">Домашние сырники</p>
 				<div class="price-and-basket">
 					<p class="el__price">490 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -172,7 +175,7 @@
 				<p class="el__name">Блины</p>
 				<div class="price-and-basket">
 					<p class="el__price">от 190 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -180,7 +183,7 @@
 				<p class="el__name">Каша c ягодами и <br>кедровыми орехами</p>
 				<div class="price-and-basket">
 					<p class="el__price">450 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -188,7 +191,7 @@
 				<p class="el__name">Скрэмбл</p>
 				<div class="price-and-basket">
 					<p class="el__price">290 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -196,7 +199,7 @@
 				<p class="el__name">Яйцо Бенедикт с лососем</p>
 				<div class="price-and-basket">
 					<p class="el__price">850 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -204,7 +207,7 @@
 				<p class="el__name">Яйцо Бенедикт с беконом</p>
 				<div class="price-and-basket">
 					<p class="el__price">650 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -212,7 +215,7 @@
 				<p class="el__name">Гречневая каша с авокадо, <br>яйцом пашот и пармезаном</p>
 				<div class="price-and-basket">
 					<p class="el__price">490 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -220,7 +223,7 @@
 				<p class="el__name">Кобб – салат с лососем</p>
 				<div class="price-and-basket">
 					<p class="el__price">890 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 			<div class="dishes__el el">
@@ -228,7 +231,7 @@
 				<p class="el__name">Кобб – салат с креветками</p>
 				<div class="price-and-basket">
 					<p class="el__price">960 ₽</p>
-					<button class="button"><span class="button-text-style">В корзину</span></button>
+					<button class="button">В корзину</button>
 				</div>
 			</div>
 		</div>
@@ -315,15 +318,15 @@
 			@@include('components/contacts.html', {})
 			<div class="form-and-dish">
 				<form action="https://www.google.com/search?q=htmlacademy" method="post" class="form-fourth-page">
-					<input type="text" name="name" value="Имя" class="form-fourth-page__name">
-					<input type="text" name="guests" value="Гостей" class="form-fourth-page__guest">
+					<input type="text" name="name" placeholder="Имя" class="form-fourth-page__name required">
+					<input type="number" name="guests" placeholder="Гостей" class="form-fourth-page__guest required">
 				</form>
 				<div class="dishes__el el">
 					<img src="../img/delivery/dish_1.png" class="el__img" alt="Яичница-глазунья из трех яиц">
 					<p class="el__name">Яичница-глазунья из трех <br>яиц</p>
 					<div class="price-and-basket">
 						<p class="el__price">250 ₽</p>
-						<button class="button"><span class="button-text-style button-text-style">В корзину</span></button>
+						<button class="button" type="submit">В корзину</button>
 					</div>
 				</div>
 			</div>
